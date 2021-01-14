@@ -1,0 +1,46 @@
+        .navbar .navbar-brand span,
+        .about h1 span,
+        .about h3 span,
+        .features .feat h4,
+        .features .feat span.glyphicon,
+        .testimonials span,
+        .price-table .price-box p,
+        .footer .row h3,
+        .footer .copy span a,
+        .option-box .gear,
+        .person h3,
+        .scroll-top:hover
+        {
+            color: #4971e4;
+        }
+        
+        .navbar-inverse .navbar-nav >
+        .active > a, .navbar-inverse .navbar-nav >
+        .active > a:hover, .navbar-inverse .navbar-nav >
+        .active > a:focus,
+        .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+        .dropdown-menu .divider,
+        .carousel-indicators .active,
+        .option-box .color-option ul li,
+        .footer .our-work img:hover,
+        .scroll-top
+        {
+            background-color: #4971e4;
+        }
+
+        .testimonials .carousel-indicators li.active,
+        .person img,
+        .option-box .color-option
+        {
+            border: 3px solid #4971e4;
+        }
+
+        .statis span
+        { 
+            text-shadow: 0px 0px 1px #4971e4;
+        }
+
+        .navbar-nav > li > .dropdown-menu
+        {
+            border-top: 3px #4971e4 solid;
+        }

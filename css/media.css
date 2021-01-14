@@ -1,0 +1,24 @@
+@media(max-width:767px)
+{
+#carousel-example-generic        { display: none }
+.footer .our-work ol img         { margin: 8px }
+.footer .sitemap .icons li img   { width: 48px; height: 48px }
+.subscribe .form-control         { margin: 5px auto; width: 200px }
+}
+
+@media(min-width:768px) and (max-width:991px)
+{
+.subscribe .form-control         { margin: auto; margin-bottom: 8px; display: block }
+.subscribe .btn-danger           { margin: auto; display: block }
+}
+
+@media(min-width:992px) and (max-width:1199px)
+{
+.subscribe .form-control         { margin: auto; margin-bottom: 8px; display: block; width: 196px }
+.subscribe .btn-danger           { margin: auto; display: block }
+}
+
+@media(min-width:1200px)
+{
+    
+}

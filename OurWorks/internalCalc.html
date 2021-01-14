@@ -1,0 +1,787 @@
+<html>
+<head>
+  <title>Calculator</title> 
+  <link rel="shortcut icon" href="Calc.ico">
+ <style>
+ #copy{
+ color: #000000;
+ font-weight: bold;
+ text-decoration: underline;
+ background-color: #d1d1d1;
+ width: 450px;
+ font-size: 17px;
+}
+#all{
+ border:solid black 5px;
+ width: 500px;
+ height: 700px;
+ background-color: #c4c4ed;
+ margin: 90px;
+ border-radius: 20px;
+ position: relative;
+}
+#lcd{
+ color: navy;
+ background-color: fff;
+ width: 450;
+ height: 45px;
+ border: solid #5a2323 3px; 
+ border-radius: 5px;
+ font-size: 20px;
+ font-family:serif;
+ font-weight: bold;
+ text-align: center;
+ padding-top: 17px;
+}
+#right{
+ width: 65px;
+ height: 425px;
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ position: absolute;
+ right: 25px;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ line-height: 2;
+ padding-top: 40px;
+}
+#bottom{
+ width: 442px;
+ height: 60px;
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ position: absolute;
+ bottom: 25px;
+ right: 25px;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ line-height: 2;
+ letter-spacing: 7;
+ padding-top: 8px;
+}
+#plus{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MIN{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MULTI{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#DIV{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MOD{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#operations{
+ position: absolute;
+ left: 28px;
+}
+#l1{
+  position: absolute;
+  left: 28px;
+  top: 200px;
+}
+#seven{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#eight{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#nine{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#l2{
+  position: absolute;
+  left: 28px;
+  top: 290px;
+}
+#four{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#five{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#six{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#l3{position: absolute;
+  left: 28px;
+  top: 380px;
+}
+#one{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#two{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#three{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#l4{
+  position: absolute;
+  left: 28px;
+  top: 470px;
+}
+#zero{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 175px;
+ height: 70px;
+}
+#dot{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: navy;
+ color: #FFF;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 175px;
+ height: 70px;
+}
+#right:hover{
+ width: 65px;
+ height: 425px;
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ position: absolute;
+ right: 25px;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ line-height: 2;
+ padding-top: 40px;
+}
+#bottom:hover{
+ width: 442px;
+ height: 60px;
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ position: absolute;
+ bottom: 25px;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ right: 25px;
+ line-height: 2;
+ letter-spacing: 7;
+ padding-top: 8px;
+}
+#plus:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MIN:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MULTI:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#DIV:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MOD:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#seven:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#eight:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#nine:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#four:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#five:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#six:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#one:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#two:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#three:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#zero:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 175px;
+ height: 70px;
+}
+#dot:hover{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #1b1bca;
+ color: #fff;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 175px;
+ height: 70px;
+}
+#right:active{
+ width: 65px;
+ height: 425px;
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ position: absolute;
+ right: 25px;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ line-height: 2;
+ padding-top: 40px;
+}
+#bottom:active{
+ width: 442px;
+ height: 60px;
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ position: absolute;
+ bottom: 25px;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ right: 25px;
+ line-height: 2;
+ letter-spacing: 7;
+ padding-top: 8px;
+}
+#plus:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MIN:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MULTI:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#DIV:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#MOD:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 68px;
+ height: 50px;
+}
+#seven:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#eight:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#nine:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#four:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#five:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#six:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#one:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#two:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#three:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 115px;
+ height: 70px;
+}
+#zero:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 175px;
+ height: 70px;
+}
+#dot:active{
+ border: solid #a70000 3px; 
+ border-radius: 5px;
+ background-color: #fff;
+ color: navy;
+ font-size: 25px;
+ font-family:serif;
+ font-weight: bold;
+ width: 175px;
+ height: 70px;
+}
+ </style>
+</head>
+
+<body>
+ <script>
+var t;
+function insert(txt) 
+{
+ window.lcd.innerHTML +=txt;
+}
+function oper(ty)
+{
+ n1 = window.lcd.innerHTML;
+ window.lcd.innerHTML="";
+ if(ty=='+')
+  t = '+';
+ else if(ty=='-')
+  t = '-';
+ else if(ty=='*')
+  t = '*';
+ else if(ty=='/')
+  t = '/';
+ else if(ty=='%')
+  t = '%';
+ else
+  t = 'No Operation'
+}
+function equal(n2)
+{
+
+ if(t=='+')
+ {
+ window.lcd.innerHTML = parseFloat(n1) + parseFloat(n2);
+ t='';
+ }
+ else if(t=='-')
+ {
+  window.lcd.innerHTML = parseFloat(n1) - parseFloat(n2);
+  t='';
+ }
+ else if(t=='*')
+ {
+  window.lcd.innerHTML = parseFloat(n1) * parseFloat(n2);
+  t='';
+ }
+ else if(t=='/')
+ { 
+  window.lcd.innerHTML = parseFloat(n1) / parseFloat(n2);
+  t='';
+ }
+ else if(t=='%')
+ {
+  window.lcd.innerHTML = parseFloat(n1) % parseFloat(n2);
+  t='';
+ }
+ else
+  window.lcd.innerHTML ='No Operation';
+}
+ </script>
+ <center>
+ <div id="all">
+  
+ <p id="lcd"></p>
+  <div id="right" onclick="window.lcd.innerHTML ='';">
+   <br>C<br>L<br>E<br>A<br>R<br>
+  </div>
+    <div id="bottom" onclick="equal(window.lcd.innerHTML);">
+   E Q U A L
+  </div>
+  <div id="operations">
+  <input type="button" id="PLUS" value="+" onclick="oper('+');">
+  <input type="button" id="MIN" value="-" onclick="oper('-');">
+  <input type="button" id="MULTI" value="*" onclick="oper('*');">
+  <input type="button" id="DIV" value="/" onclick="oper('/');">
+  <input type="button" id="MOD" value="%" onclick="oper('%');">
+  </div>
+  
+  <div id="l1">
+  <input type="button" id="seven" value="7" onclick="insert(7);">
+  <input type="button" id="eight" value="8" onclick="insert(8);">
+  <input type="button" id="nine" value="9" onclick="insert(9);">
+  </div>
+  
+  <div id="l2">
+  <input type="button" id="four" value="4" onclick="insert(4);">
+  <input type="button" id="five" value="5" onclick="insert(5);">
+  <input type="button" id="six" value="6" onclick="insert(6);">
+  </div>
+  
+  <div id="l3">
+  <input type="button" id="one" value="1" onclick="insert(1);">
+  <input type="button" id="two" value="2" onclick="insert(2);">
+  <input type="button" id="three" value="3" onclick="insert(3);">
+  </div>
+  
+  <div id="l4">
+  <input type="button" id="zero" value="0" onclick="insert(0);">
+  <input type="button" id="dot" value="." onclick="insert('.');">
+  </div>
+  
+ </div>
+  <p id="copy">Copright&copy; 2019 All Right Reserved To EL_Darsh&reg; Team</p>
+ </center>
+</body>
+</html>
